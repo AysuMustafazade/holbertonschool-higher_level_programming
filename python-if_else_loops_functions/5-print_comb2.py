@@ -4,4 +4,3 @@ for i in range(0, 100):
         print(f"0{i}", end=",")
         continue
     print(i, end=",")
-    
