@@ -6,4 +6,4 @@ def replace_in_list(my_list, idx, element):
     elif idx > (len(my_list)-1):
         return my_list
     else:
-        return my_list.replace(my_list[idx], element)
+        return s.replace(my_list[idx], element) for s in my_list
