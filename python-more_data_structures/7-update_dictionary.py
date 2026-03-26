@@ -5,4 +5,4 @@ def update_dictionary(a_dictionary, key, value):
     for key1 in new_dict:
         if key1 == key:
             print(f"{key1}: {value}")
-    print(a_dictionary + " ---" + new_dict)
+    print(f'{key}: {a_dictionary[key]} + " ---" + {key1}: {new_dict[key1]}')
