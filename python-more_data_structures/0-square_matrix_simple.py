@@ -4,4 +4,4 @@ def square_matrix_simple(matrix=[]):
     for row in matrix:
         for element in row:
             k = element*element
-            print(" ".join("{:d}".format(k)))
+            print("{:d}".format(k))
