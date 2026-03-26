@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def print_matrix_integer(matrix=[[]]):
+def square_matrix_simple(matrix=[]):
     for row in matrix:
         for element in row:
             k = element*element
