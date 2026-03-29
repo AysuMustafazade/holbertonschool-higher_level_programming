@@ -25,4 +25,4 @@ def text_indentation(text):
         print(text[i], end="")
 
         if text[i] in ".?:":
-            print("\n", end="")
+            print("\n")
