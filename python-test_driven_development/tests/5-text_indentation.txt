@@ -1,0 +1,48 @@
+The ``5-text_indentation`` module
+==================================
+
+Using ``text_indentation``
+--------------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Standard string with mixed punctuation:
+>>> text_indentation("Hello. World? This is a test: Cheers")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+This is a test:
+<BLANKLINE>
+Cheers
+
+String with multiple spaces after punctuation:
+>>> text_indentation("End of sentence.     Next sentence starts.")
+End of sentence.
+<BLANKLINE>
+Next sentence starts.
+
+String with no punctuation:
+>>> text_indentation("Just a normal sentence with no triggers")
+Just a normal sentence with no triggers
+
+--------------------------
+Error Handling
+--------------------------
+
+Non-string input (integer):
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+Non-string input (None):
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+Missing argument:
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
