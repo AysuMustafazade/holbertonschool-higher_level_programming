@@ -20,5 +20,4 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
     if not isinstance((string), last_name):
         raise TypeError("first_name must be a string")
-    return first_name, last_name
-print("My name is {} {}".format(first_name, last_name))
+    print("My name is {} {}".format(first_name, last_name))
