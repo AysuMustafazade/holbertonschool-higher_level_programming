@@ -1,0 +1,75 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+-----------------------
+
+Importing the function:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Normal case with integers:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Normal case with floats:
+    >>> matrix_divided([[0.5, 1.5], [2.5, 3.5]], 2)
+    [[0.25, 0.75], [1.25, 1.75]]
+
+Check that the original matrix is NOT modified:
+    >>> matrix = [[1, 2], [3, 4]]
+    >>> new_matrix = matrix_divided(matrix, 2)
+    >>> matrix
+    [[1, 2], [3, 4]]
+
+Case: Each row must have the same size:
+    >>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+Case: Div is 0:
+    >>> matrix_divided([[1, 2], [3, 4]], 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Case: Div is not a number (string):
+    >>> matrix_divided([[1, 2], [3, 4]], "3")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Case: Matrix is not a list of lists:
+    >>> matrix_divided([1, 2, 3], 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: Matrix contains a non-number:
+    >>> matrix_divided([[1, 2], [3, "4"]], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case: Div is None:
+    >>> matrix_divided([[1, 2], [3, 4]], None)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Case: Div is Infinity (should result in 0.0):
+    >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+Case: Missing the 'div' argument:
+    >>> matrix_divided([[1, 2], [3, 4]])
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Case: Missing both arguments:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
