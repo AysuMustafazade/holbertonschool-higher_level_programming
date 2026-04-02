@@ -52,7 +52,7 @@ class Rectangle:
         """the rectangle with the character #"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        str(self.print_symbol) * self.__width
+        return str(self.print_symbol) * self.__width
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
