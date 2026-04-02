@@ -2,6 +2,6 @@
 """This module defines a rectangle."""
 
 
-class Square():
+class Rectangle():
     """Defines a rectangle."""
     pass
