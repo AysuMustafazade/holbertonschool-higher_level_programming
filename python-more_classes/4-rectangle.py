@@ -54,4 +54,4 @@ class Rectangle:
                 return str("#" * self.__width)
 
     def __repr__(self):
-        return tuple(self._width, self.__height)
+        return tuple(self.__width, self.__height)
