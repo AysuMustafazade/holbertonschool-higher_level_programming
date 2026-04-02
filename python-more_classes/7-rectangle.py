@@ -6,6 +6,7 @@ class Rectangle:
     """Defines a rectangle."""
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -52,7 +53,8 @@ class Rectangle:
         """the rectangle with the character #"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width for i in range(self.__height)])
+        row = str(self.print_symbol) * self.__width
+        return "\n".join([row for i in range(self.__height)])
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
