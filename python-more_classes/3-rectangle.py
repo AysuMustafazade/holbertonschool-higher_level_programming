@@ -46,5 +46,8 @@ class Rectangle:
             return perimeter
     def my_print(self):
         """the rectangle with the character #"""
-        for i in range(self.__height):
-            print(str("#" * self.__width))
+        if self.__height == 0 or self.__width == 0:
+            print("")
+        else:
+            for i in range(self.__height):
+                print(str("#" * self.__width))
