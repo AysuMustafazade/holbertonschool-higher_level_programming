@@ -44,6 +44,7 @@ class Rectangle:
         else:
             perimeter = 2*(self.__height+self.__width)
             return perimeter
+
     def __str__(self):
         """the rectangle with the character #"""
         if self.__height == 0 or self.__width == 0:
