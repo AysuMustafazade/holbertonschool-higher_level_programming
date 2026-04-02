@@ -14,3 +14,4 @@ class Square:
         """Defines an area."""\
         area = size**2
         return area
+    return Square.area()
