@@ -48,10 +48,10 @@ class Rectangle:
     def __str__(self):
         """the rectangle with the character #"""
         if self.__height == 0 or self.__width == 0:
-            print("")
+            return ""
         else:
             for i in range(self.__height):
-                return str("#" * self.__width)
+                return "\n".join("#" * self.__width)
 
     def __repr__(self):
-        return tuple(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
