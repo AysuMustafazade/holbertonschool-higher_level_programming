@@ -47,4 +47,4 @@ class Rectangle:
     def my_print(self):
         """the rectangle with the character #"""
         for i in range(self.__height):
-            print("#" * self.__width)
+            print(str("#" * self.__width))
