@@ -52,4 +52,4 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 print(str("#" * self.__width))
-return eval(repr(Rectangle()))
+    return eval(repr(Rectangle()))
