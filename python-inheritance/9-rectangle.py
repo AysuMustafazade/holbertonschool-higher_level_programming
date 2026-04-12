@@ -15,6 +15,6 @@ class Rectangle(Rectangle):
         """Defines an area."""
         area = self.__height*self.__width
         return area
-    
+
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
