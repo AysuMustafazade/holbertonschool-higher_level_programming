@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class CountedIterator(iter):
+class CountedIterator:
     def __init__(self, iterable):
         self.iterator = iter(iterable)
         self.count = 0
