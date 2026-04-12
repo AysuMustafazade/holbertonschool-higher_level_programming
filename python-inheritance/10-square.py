@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''module with class BaseGeometry'''
+'''module with class Rectangle'''
 Rectangle = __import__('9-rectangle').Rectangle
 
 
