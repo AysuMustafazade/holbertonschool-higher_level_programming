@@ -2,6 +2,7 @@
 '''module with class BaseGeometry'''
 Rectangle = __import__('8-rectangle').Rectangle
 
+
 class Rectangle(Rectangle):
     '''Rectangle class'''
     def __init__(self, width, height):
