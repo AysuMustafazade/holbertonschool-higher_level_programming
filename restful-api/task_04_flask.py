@@ -6,6 +6,7 @@ app = Flask(__name__)
 def home():
     return "Welcome to the Flask API!"
 
+
 @app.route("/data")
 def return_users(): 
     users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
@@ -17,7 +18,8 @@ def check_status():
 
 @app.route("/users/<username>")
 def return_user(username):
-    if ()
+    if ():
+        pass
 
 @app.route("/add_user", methods=['POST'])
 def add_user(add_user):
