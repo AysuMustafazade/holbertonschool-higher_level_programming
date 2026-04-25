@@ -30,7 +30,7 @@ def basic_auth_error(status):
 @app.route("/basic-protected")
 @auth.login_required
 def basic_protected():
-    return jsonify({"message": "Basic Auth: Access Granted"})
+    return "Basic Auth: Access Granted"
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -51,7 +51,7 @@ def login():
 @app.route("/jwt-protected")
 @jwt_required()
 def jwt_protected():
-    return jsonify({"message": "JWT Auth: Access Granted"})
+    return "JWT Auth: Access Granted"
 
 @app.route("/admin-only")
 @jwt_required()
@@ -59,7 +59,7 @@ def admin_only():
     claims = get_jwt()
     if claims.get("role") != "admin":
         return jsonify({"error": "Admin access required"}), 403
-    return jsonify({"message": "Admin Access: Granted"})
+    return "Admin Access: Granted"
 
 @jwt.unauthorized_loader
 def handle_unauthorized_error(err):
