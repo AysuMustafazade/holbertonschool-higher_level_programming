@@ -19,7 +19,6 @@ if __name__ == "__main__":
 
     if state_to_update:
         state_to_update.name = 'New Mexico'
-        
         session.commit()
 
     session.close()
