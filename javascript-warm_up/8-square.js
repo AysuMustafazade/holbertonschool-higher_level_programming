@@ -1,11 +1,10 @@
 #!/usr/bin/node
-const myVar = parseInt(process.argv[2], 10);
-if (Number.isInteger(myVar)) {
-  for (let i = 0; i < myVar; i++) {
-      for (let j = 0; j < myVar; j++) {
-          console.log('X');
-        }
-    }
+const firstArg = process.argv[2];
+const number = parseInt(firstArg, 10);
+if (Number.isInteger(number)) {
+  for (let i = 0; i < number; i++) {
+    console.log('X'.repeat(number));
+  }
 } else {
   console.log('Missing size');
 }
